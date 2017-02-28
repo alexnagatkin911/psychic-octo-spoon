@@ -6,9 +6,21 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+      <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  
   </head>
-
-  <body>
+<nav style="padding-top: 1%; margin-top: 2%;" class="navbar navbar-default">
+  <ul style="display:inline-flex">
+    <li >
+      <%= link_to 'New User', new_user_path %>
+    </li>
+    <li style="margin-left:4%">
+      <%= link_to 'New Micropost', new_micropost_path %>
+    </li>
+  </ul>
+</nav>
+  <body class="container">
     <%= yield %>
   </body>
 </html>
